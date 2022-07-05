@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.Locale;
 
 /**
@@ -20,7 +19,7 @@ public class Billing {
      */
     public Billing(Doctor doctor, Patient patient, HealthCarePlan healthCarePlan,
                    int hours) {
-        Locale.setDefault(US);
+        Locale.setDefault(Locale.US);
         setDoctor(doctor);
         setPatient(patient);
         setHealthCarePlan(healthCarePlan);
@@ -67,6 +66,6 @@ public class Billing {
     public double getBill() {
         double bill = hours * doctor.getOfficeVisitFee() 
                * (1 - healthCarePlan.getRefundPercent());
-        return Double.parseDouble(new DecimalFormat("##.##").format(bill));
+        return Double.parseDouble(String.format("%.2f%n", bill));
     }
 }
