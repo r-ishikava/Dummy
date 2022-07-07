@@ -1,3 +1,6 @@
+/**
+ * Class to calculate the total resistance of a parallel circuit.
+ */
 public class ParallelCircuit extends CompositeCircuit {
     public ParallelCircuit(Circuit[] circuit) {
         super(circuit);

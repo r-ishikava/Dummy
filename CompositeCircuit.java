@@ -1,3 +1,6 @@
+/**
+ * Class for composite circuits.
+ */
 public abstract class CompositeCircuit extends Circuit {
     private final Circuit[] circuits;
 

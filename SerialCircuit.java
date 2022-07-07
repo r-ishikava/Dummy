@@ -1,3 +1,6 @@
+/**
+ * Class to calculate the total resistance value of a serial circuit.
+ */
 public class SerialCircuit extends CompositeCircuit {
     public SerialCircuit(Circuit[] circuits) {
         super(circuits);
